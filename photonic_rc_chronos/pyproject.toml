@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photonic_rc_chronos"
+version = "0.1.0"
+description = "Photonic reservoir computer integrated with DeepChronos"
+authors = [{name = "Researcher", email = "research@example.com"}]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jax>=0.4",
+    "numpy",
+    "optax",
+    "matplotlib",
+    "autogluon.timeseries",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "coverage",
+    "ruff",
+    "mypy",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.black]
+line-length = 88
+
+[tool.coverage.run]
+source = ["photonic_rc"]
+branch = true
+
+[tool.mypy]
+python_version = "3.12"
