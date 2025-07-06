@@ -9,6 +9,9 @@ This repository couples a differentiable photonic reservoir computer with the De
 - Noise and hardware-aware training
 - Benchmark suite: M4, Mackey–Glass, telecom channel equalisation, MIT‑BIH ECG
 
+## System Architecture
+A detailed walkthrough of the architecture is provided in `docs/architecture.md`. In short, input sequences are injected into an Ikeda-style photonic reservoir and optionally processed by a two-dimensional waveguide mesh. The resulting states drive a Chronos transformer which produces forecasts or equalised signals. An energy estimator tracks the picojoule cost per operation to support hardware-aware optimisation.
+
 ## Installation
 ```bash
 python3 -m venv .venv
